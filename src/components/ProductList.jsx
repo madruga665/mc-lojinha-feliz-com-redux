@@ -10,7 +10,7 @@ export default class ProductList extends Component {
       <section className="product-list">
         <h2>Nossos Produtos</h2>
         {data.map((product) => (
-          <ProductItem data={product} />
+          <ProductItem key={product.id} data={product} />
         ))}
       </section>
     );
