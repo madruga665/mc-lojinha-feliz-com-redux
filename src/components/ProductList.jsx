@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import "./styles/ProductList.css";
+import data from "../helpers/data";
+import ProductItem from "./ProductItem";
 
 export default class ProductList extends Component {
   render() {
+    console.log(data)
     return (
       <section className="product-list">
-        <ul>
-          <li>Item 1</li>
-          <li>Item 2</li>
-          <li>Item 3</li>
-          <li>Item 4</li>
-          <li>Item 5</li>
-        </ul>
+        {data.map((product) => (
+          <ProductItem data={product} />
+        ))}
       </section>
     );
   }
