@@ -3,3 +3,6 @@
  **Projeto feito para estudar redux.**
 
  - Uma mini loja com carrinho de compras.
+
+
+ <img src="./resultado.png" />
