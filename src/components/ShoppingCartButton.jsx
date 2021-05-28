@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import "./styles/ShoppingCartButton.css";
 
 export default class ShoppingCartButton extends Component {
@@ -7,9 +8,11 @@ export default class ShoppingCartButton extends Component {
     return (
       <div className="shopping-cart-container">
         <div className="itens-cart-quantity">10</div>
-        <button className="shopping-cart-button">
-          <FiShoppingCart size={32}/>
-        </button>
+        <Link to="/shopping-cart">
+          <button className="shopping-cart-button">
+            <FiShoppingCart size={32} />
+          </button>
+        </Link>
       </div>
     );
   }
