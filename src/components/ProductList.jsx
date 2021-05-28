@@ -8,6 +8,7 @@ export default class ProductList extends Component {
     console.log(data)
     return (
       <section className="product-list">
+        <h2>Nossos Produtos</h2>
         {data.map((product) => (
           <ProductItem data={product} />
         ))}
