@@ -1,6 +1,6 @@
 import { ADD_ITEM_TO_CART } from "./actionTypes";
 
-export const shoppingCart = (value) => ({
+export const addToShoopingCart = (item) => ({
   type: ADD_ITEM_TO_CART,
-  newValue: value,
+  newItem: item,
 });

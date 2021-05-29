@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { FiShoppingCart } from "react-icons/fi";
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import "./styles/ShoppingCartButton.css";
 
-export default class ShoppingCartButton extends Component {
+class ShoppingCartButton extends Component {
   constructor() {
     super();
     this.state = {
@@ -12,16 +13,18 @@ export default class ShoppingCartButton extends Component {
   }
 
   shoppingCartQuantity = () => {
-    const { shoppingCart } = this.state;
-    return <div className="itens-cart-quantity">{shoppingCart.length}</div>;
+    const { newCart } = this.props;
+    console.log(newCart)
+    return <div className="itens-cart-quantity">{newCart.length}</div>;
   };
 
   render() {
-    const { shoppingCart } = this.state;
+    const { newCart} = this.props;
+    console.log(newCart)
     return (
       <div className="shopping-cart-container">
         <Link to="/shopping-cart">
-          {shoppingCart.length === 0 ? null : this.shoppingCartQuantity()}
+          {newCart.length === 0 ? null : this.shoppingCartQuantity()}
           <button className="shopping-cart-button">
             <FiShoppingCart size={32} />
           </button>
@@ -30,3 +33,9 @@ export default class ShoppingCartButton extends Component {
     );
   }
 }
+
+const mapStateToProps = (store) => ({
+  newCart: store.shoppingCart,
+});
+
+export default connect(mapStateToProps)(ShoppingCartButton);

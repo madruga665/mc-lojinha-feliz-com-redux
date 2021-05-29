@@ -1,10 +1,13 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import { addToShoopingCart } from "../redux/actions"
 import "./styles/ProductItem.css";
 
-export default class ProductItem extends Component {
+class ProductItem extends Component {
 
   render() {
-    const { product, addProductToCart } = this.props;
+    const { product, addToShoopingCart } = this.props;
     const { id, name, price, image } = product;
     return (
       <div className="product-item">
@@ -12,9 +15,19 @@ export default class ProductItem extends Component {
         <span>{name}</span>
         <div className="price">
           R$ {price.toFixed(2)}
-          <button onClick={ () => addProductToCart(id)}>Adicionar ao carrinho</button>
+          <button onClick={ () => addToShoopingCart(product)}>Adicionar ao carrinho</button>
         </div>
       </div>
     );
   }
 }
+
+const mapStateToProps = (store) => ({
+  newCart: store.shoppingCart.newValue,
+});
+
+const mapDispatchToProps = (dispatch) => {
+  return bindActionCreators({ addToShoopingCart }, dispatch);
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductItem);
