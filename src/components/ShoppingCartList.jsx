@@ -16,7 +16,12 @@ class ShoppingCartList extends Component {
             </li>
           ))}
         </ul>
-        <span>Total: R$100</span>
+        <span>
+          Total: 
+          {newCart.reduce((accumulator, currentValue) => {
+            return accumulator + currentValue.price;
+          },0).toFixed(2)}
+        </span>
       </div>
     );
   }
