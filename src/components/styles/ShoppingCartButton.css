@@ -3,6 +3,15 @@
   right: 5rem;
 }
 
+.shopping-cart-container a {
+  text-decoration: none;
+  color: white;
+}
+
+.shopping-cart-button {
+  cursor: pointer;
+}
+
 .itens-cart-quantity {
   text-align: center;
   background-color: red;

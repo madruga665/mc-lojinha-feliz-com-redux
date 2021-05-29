@@ -8,7 +8,7 @@ class ProductItem extends Component {
 
   render() {
     const { product, addToShoopingCart } = this.props;
-    const { id, name, price, image } = product;
+    const { name, price, image } = product;
     return (
       <div className="product-item">
         <img src={image} alt={`foto do ${name}`} />
