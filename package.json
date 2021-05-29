@@ -21,7 +21,7 @@
     "test-coverage": "react-scripts test --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d mc-lojinha-com-redux"
   },
   "eslintConfig": {
     "extends": [
