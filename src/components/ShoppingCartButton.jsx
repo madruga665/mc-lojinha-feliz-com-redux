@@ -4,11 +4,24 @@ import { Link } from "react-router-dom";
 import "./styles/ShoppingCartButton.css";
 
 export default class ShoppingCartButton extends Component {
+  constructor() {
+    super();
+    this.state = {
+      shoppingCart: [],
+    };
+  }
+
+  shoppingCartQuantity = () => {
+    const { shoppingCart } = this.state;
+    return <div className="itens-cart-quantity">{shoppingCart.length}</div>;
+  };
+
   render() {
+    const { shoppingCart } = this.state;
     return (
       <div className="shopping-cart-container">
-        <div className="itens-cart-quantity">10</div>
         <Link to="/shopping-cart">
+          {shoppingCart.length === 0 ? null : this.shoppingCartQuantity()}
           <button className="shopping-cart-button">
             <FiShoppingCart size={32} />
           </button>
