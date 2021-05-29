@@ -9,7 +9,6 @@ export const ShoppingCartReducer = (state = initialState, action) => {
         ...state,
         newValue: action.newValue,
       }
-  
     default:
       return state;
   }
