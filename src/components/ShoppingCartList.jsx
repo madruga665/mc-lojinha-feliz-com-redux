@@ -7,8 +7,8 @@ class ShoppingCartList extends Component {
     return (
       <div className="shopping-cart-list">
         <ul>
-          {newCart.map((item) => (
-            <li>
+          {newCart.map((item, index) => (
+            <li key={`${item.id}${index}`}>
               {item.name}
               Quntidade: 10
               <button>-</button>
