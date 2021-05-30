@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.833d4ed8.chunk.css",
-    "main.js": "/static/js/main.9f3d6fbb.chunk.js",
-    "main.js.map": "/static/js/main.9f3d6fbb.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.95fa54c9.js",
-    "runtime-main.js.map": "/static/js/runtime-main.95fa54c9.js.map",
-    "static/js/2.6cc191d3.chunk.js": "/static/js/2.6cc191d3.chunk.js",
-    "static/js/2.6cc191d3.chunk.js.map": "/static/js/2.6cc191d3.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.833d4ed8.chunk.css.map": "/static/css/main.833d4ed8.chunk.css.map",
-    "static/js/2.6cc191d3.chunk.js.LICENSE.txt": "/static/js/2.6cc191d3.chunk.js.LICENSE.txt"
+    "main.css": "/mc-lojinha-feliz-com-redux/static/css/main.a9b3288d.chunk.css",
+    "main.js": "/mc-lojinha-feliz-com-redux/static/js/main.1ebde3b7.chunk.js",
+    "main.js.map": "/mc-lojinha-feliz-com-redux/static/js/main.1ebde3b7.chunk.js.map",
+    "runtime-main.js": "/mc-lojinha-feliz-com-redux/static/js/runtime-main.8a87f269.js",
+    "runtime-main.js.map": "/mc-lojinha-feliz-com-redux/static/js/runtime-main.8a87f269.js.map",
+    "static/js/2.4418a729.chunk.js": "/mc-lojinha-feliz-com-redux/static/js/2.4418a729.chunk.js",
+    "static/js/2.4418a729.chunk.js.map": "/mc-lojinha-feliz-com-redux/static/js/2.4418a729.chunk.js.map",
+    "index.html": "/mc-lojinha-feliz-com-redux/index.html",
+    "static/css/main.a9b3288d.chunk.css.map": "/mc-lojinha-feliz-com-redux/static/css/main.a9b3288d.chunk.css.map",
+    "static/js/2.4418a729.chunk.js.LICENSE.txt": "/mc-lojinha-feliz-com-redux/static/js/2.4418a729.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.95fa54c9.js",
-    "static/js/2.6cc191d3.chunk.js",
-    "static/css/main.833d4ed8.chunk.css",
-    "static/js/main.9f3d6fbb.chunk.js"
+    "static/js/runtime-main.8a87f269.js",
+    "static/js/2.4418a729.chunk.js",
+    "static/css/main.a9b3288d.chunk.css",
+    "static/js/main.1ebde3b7.chunk.js"
   ]
 }
