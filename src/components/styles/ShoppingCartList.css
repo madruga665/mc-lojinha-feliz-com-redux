@@ -1,0 +1,12 @@
+.shopping-cart-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50rem;
+  height: 25rem;
+  overflow: auto;
+}
+
+.total {
+  margin-top: 20px;
+}

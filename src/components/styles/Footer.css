@@ -1,4 +1,7 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   position: absolute;
-  bottom: 1.5rem;
+  bottom: 1rem;
 }
