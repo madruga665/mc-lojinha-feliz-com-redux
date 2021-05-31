@@ -8,12 +8,12 @@ class ShoppingCartList extends Component {
     const { newCart } = this.props;
     return (
       <>
-      <div className="shopping-cart-list">
-        {newCart.map((item, index) => (
-          <CartProductItem key={`${item.id}${index}`} product={ item } />
-        ))}
-      </div>
-      <div className="total">
+        <div className="shopping-cart-list">
+          {newCart.map((item, index) => (
+            <CartProductItem key={`${item.id}${index}`} product={item} />
+          ))}
+        </div>
+        <div className="total">
           <span>Total: </span>
           {newCart
             .reduce((accumulator, currentValue) => {

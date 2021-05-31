@@ -14,13 +14,13 @@ class ShoppingCartButton extends Component {
 
   shoppingCartQuantity = () => {
     const { newCart } = this.props;
-    console.log(newCart)
+    console.log(newCart);
     return <div className="itens-cart-quantity">{newCart.length}</div>;
   };
 
   render() {
-    const { newCart} = this.props;
-    console.log(newCart)
+    const { newCart } = this.props;
+    console.log(newCart);
     return (
       <div className="shopping-cart-container">
         <Link to="/shopping-cart">
