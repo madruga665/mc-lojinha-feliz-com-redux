@@ -12,7 +12,6 @@ class ShoppingCartButton extends Component {
 
   render() {
     const { shoppingCart } = this.props;
-    console.log(shoppingCart);
     return (
       <div className="shopping-cart-container">
         <Link to="/shopping-cart">
