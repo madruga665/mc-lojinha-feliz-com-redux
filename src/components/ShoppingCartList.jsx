@@ -5,17 +5,17 @@ import "./styles/ShoppingCartList.css";
 
 class ShoppingCartList extends Component {
   render() {
-    const { newCart } = this.props;
+    const { shoppingCart } = this.props;
     return (
       <>
         <div className="shopping-cart-list">
-          {newCart.map((item, index) => (
+          {shoppingCart.map((item, index) => (
             <CartProductItem key={`${item.id}${index}`} product={item} />
           ))}
         </div>
         <div className="total">
           <span>Total: </span>
-          {newCart
+          {shoppingCart
             .reduce((accumulator, currentValue) => {
               return accumulator + currentValue.price;
             }, 0)
@@ -26,8 +26,8 @@ class ShoppingCartList extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
-  newCart: store.shoppingCart,
+const mapStateToProps = (state) => ({
+  shoppingCart: state.shoppingCart.cart,
 });
 
 export default connect(mapStateToProps)(ShoppingCartList);

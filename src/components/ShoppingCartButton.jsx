@@ -5,26 +5,18 @@ import { Link } from "react-router-dom";
 import "./styles/ShoppingCartButton.css";
 
 class ShoppingCartButton extends Component {
-  constructor() {
-    super();
-    this.state = {
-      shoppingCart: [],
-    };
-  }
-
   shoppingCartQuantity = () => {
-    const { newCart } = this.props;
-    console.log(newCart);
-    return <div className="itens-cart-quantity">{newCart.length}</div>;
+    const { shoppingCart } = this.props;
+    return <div className="itens-cart-quantity">{shoppingCart.length}</div>;
   };
 
   render() {
-    const { newCart } = this.props;
-    console.log(newCart);
+    const { shoppingCart } = this.props;
+    console.log(shoppingCart);
     return (
       <div className="shopping-cart-container">
         <Link to="/shopping-cart">
-          {newCart.length === 0 ? null : this.shoppingCartQuantity()}
+          {shoppingCart.length === 0 ? null : this.shoppingCartQuantity()}
           <button className="shopping-cart-button">
             <FiShoppingCart size={32} />
           </button>
@@ -34,8 +26,8 @@ class ShoppingCartButton extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
-  newCart: store.shoppingCart,
+const mapStateToProps = (state) => ({
+  shoppingCart: state.shoppingCart.cart,
 });
 
 export default connect(mapStateToProps)(ShoppingCartButton);

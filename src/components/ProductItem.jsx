@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
 import { addToShoopingCart } from "../redux/actions";
 import "./styles/ProductItem.css";
 
@@ -23,12 +22,10 @@ class ProductItem extends Component {
   }
 }
 
-const mapStateToProps = (store) => ({
-  newCart: store.shoppingCart.newValue,
+const mapDispatchToProps = (dispatch) => ({
+  addToShoopingCart: (item) => dispatch(
+    addToShoopingCart(item),
+  ),
 });
 
-const mapDispatchToProps = (dispatch) => {
-  return bindActionCreators({ addToShoopingCart }, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(ProductItem);
+export default connect(null, mapDispatchToProps)(ProductItem);
