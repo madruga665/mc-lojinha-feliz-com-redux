@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { addToShoopingCart } from "../redux/actions";
+import { addItemToShoopingCart } from "../redux/actions";
 import "./styles/ProductItem.css";
 
 class ProductItem extends Component {
   render() {
-    const { product, addToShoopingCart } = this.props;
+    const { product, addItemToShoopingCart } = this.props;
     const { name, price, image } = product;
     return (
       <div className="product-item">
@@ -13,7 +13,7 @@ class ProductItem extends Component {
         <span>{name}</span>
         <div className="price">
           R$ {price.toFixed(2)}
-          <button onClick={() => addToShoopingCart(product)}>
+          <button onClick={() => addItemToShoopingCart(product)}>
             Adicionar ao carrinho
           </button>
         </div>
@@ -23,8 +23,8 @@ class ProductItem extends Component {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  addToShoopingCart: (item) => dispatch(
-    addToShoopingCart(item),
+  addItemToShoopingCart: (item) => dispatch(
+    addItemToShoopingCart(item),
   ),
 });
 

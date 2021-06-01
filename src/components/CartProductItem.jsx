@@ -1,9 +1,11 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
+import { removeItemFromCart } from "../redux/actions";
 import "./styles/CartProductItem.css";
 
-export default class CartProductItem extends Component {
+class CartProductItem extends Component {
   render() {
-    const { product } = this.props;
+    const { product, removeItemFromCart } = this.props;
     const { image, name } = product;
     return (
       <div className="cart-product-item">
@@ -15,9 +17,17 @@ export default class CartProductItem extends Component {
             <button>-</button>
             <button>+</button>
           </div>
-          <button>Remover</button>
+          <button onClick={() => removeItemFromCart(product)}>Remover</button>
         </div>
       </div>
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => ({
+  removeItemFromCart: (item) => dispatch(
+    removeItemFromCart(item),
+  ),
+});
+
+export default connect(null, mapDispatchToProps)(CartProductItem);
