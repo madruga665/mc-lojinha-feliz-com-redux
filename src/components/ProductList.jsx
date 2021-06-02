@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import "./styles/ProductList.css";
-import products from "../helpers/data";
 import ProductItem from "./ProductItem";
+import { connect } from "react-redux";
 
-export default class ProductList extends Component {
+class ProductList extends Component {
   render() {
+    const { products } = this.props;
     return (
       <section className="product-list">
         <h2>Nossos Produtos</h2>
@@ -15,3 +16,9 @@ export default class ProductList extends Component {
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  products: state.shoppingCart.products,
+});
+
+export default connect(mapStateToProps)(ProductList);

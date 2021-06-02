@@ -1,4 +1,4 @@
-import { ADD_ITEM_TO_CART, REMOVE_ITEM_FORM_CART } from "./actionTypes";
+import { ADD_ITEM_TO_CART, REMOVE_ITEM_FORM_CART} from "./actionTypes";
 
 export const addItemToShoopingCart = (item) => ({
   type: ADD_ITEM_TO_CART,

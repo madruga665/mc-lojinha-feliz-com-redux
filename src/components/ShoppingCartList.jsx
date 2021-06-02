@@ -14,10 +14,10 @@ class ShoppingCartList extends Component {
           ))}
         </div>
         <div className="total">
-          <span>Total: </span>
+          <span>Total: R$ </span>
           {shoppingCart
             .reduce((accumulator, currentValue) => {
-              return accumulator + currentValue.price;
+              return accumulator + (currentValue.price * currentValue.quantity);
             }, 0)
             .toFixed(2)}
         </div>

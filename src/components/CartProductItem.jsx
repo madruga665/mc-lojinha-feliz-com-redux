@@ -1,21 +1,22 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { removeItemFromCart } from "../redux/actions";
+import { addItemToShoopingCart, removeItemFromCart } from "../redux/actions";
 import "./styles/CartProductItem.css";
 
 class CartProductItem extends Component {
   render() {
-    const { product, removeItemFromCart } = this.props;
-    const { image, name } = product;
+    const { product, removeItemFromCart, addItemToShoopingCart  } = this.props;
+    const { image, name, price, quantity } = product;
     return (
       <div className="cart-product-item">
         <img src={image} alt={`foto do ${name}`} />
         <span>{name}</span>
+        <span>R$:{price.toFixed(2)}</span>
         <div className="price">
-          <span>1</span>
+          <span>{quantity}</span>
           <div>
             <button>-</button>
-            <button>+</button>
+            <button onClick={() => addItemToShoopingCart(product)}>+</button>
           </div>
           <button onClick={() => removeItemFromCart(product)}>Remover</button>
         </div>
@@ -24,10 +25,17 @@ class CartProductItem extends Component {
   }
 }
 
+const mapStateToProps = (state) => ({
+  itemQuantity: state.shoppingCart.itemQuantity,
+});
+
 const mapDispatchToProps = (dispatch) => ({
   removeItemFromCart: (item) => dispatch(
     removeItemFromCart(item),
   ),
+  addItemToShoopingCart: (item) => dispatch(
+    addItemToShoopingCart(item),
+  ),
 });
 
-export default connect(null, mapDispatchToProps)(CartProductItem);
+export default connect(mapStateToProps, mapDispatchToProps)(CartProductItem);
