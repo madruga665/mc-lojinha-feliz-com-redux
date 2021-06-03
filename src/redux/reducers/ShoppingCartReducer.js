@@ -13,9 +13,7 @@ export const ShoppingCartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_ITEM_TO_CART:
       const findProduct = initialState.products.find((product) => {
-        return product.id === action.payload.item.id
-          ? (product.quantity = 1)
-          : product;
+        return product.id === action.payload.item.id;
       });
       const cartVerification = state.cart.find((cartItem) => {
         return cartItem.id === action.payload.item.id ? true : false;
@@ -29,7 +27,7 @@ export const ShoppingCartReducer = (state = initialState, action) => {
                 ? { ...item, quantity: item.quantity + 1 }
                 : item
             )
-          : [...state.cart, findProduct],
+          : [...state.cart, {...findProduct, quantity: 1}],
       };
     case REMOVE_ITEM_FORM_CART:
       const filterProducts = state.cart.filter((product) => {
