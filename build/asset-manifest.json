@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/mc-lojinha-feliz-com-redux/static/css/main.a9b3288d.chunk.css",
+    "main.js": "/mc-lojinha-feliz-com-redux/static/js/main.1c62a01b.chunk.js",
+    "main.js.map": "/mc-lojinha-feliz-com-redux/static/js/main.1c62a01b.chunk.js.map",
+    "runtime-main.js": "/mc-lojinha-feliz-com-redux/static/js/runtime-main.8a87f269.js",
+    "runtime-main.js.map": "/mc-lojinha-feliz-com-redux/static/js/runtime-main.8a87f269.js.map",
+    "static/js/2.0e1c1de0.chunk.js": "/mc-lojinha-feliz-com-redux/static/js/2.0e1c1de0.chunk.js",
+    "static/js/2.0e1c1de0.chunk.js.map": "/mc-lojinha-feliz-com-redux/static/js/2.0e1c1de0.chunk.js.map",
+    "index.html": "/mc-lojinha-feliz-com-redux/index.html",
+    "static/css/main.a9b3288d.chunk.css.map": "/mc-lojinha-feliz-com-redux/static/css/main.a9b3288d.chunk.css.map",
+    "static/js/2.0e1c1de0.chunk.js.LICENSE.txt": "/mc-lojinha-feliz-com-redux/static/js/2.0e1c1de0.chunk.js.LICENSE.txt",
+    "static/media/big-tasty.3f5a81d0.png": "/mc-lojinha-feliz-com-redux/static/media/big-tasty.3f5a81d0.png",
+    "static/media/bigmac.3a17fcd9.png": "/mc-lojinha-feliz-com-redux/static/media/bigmac.3a17fcd9.png",
+    "static/media/duplo-bigmac.d5c78643.png": "/mc-lojinha-feliz-com-redux/static/media/duplo-bigmac.d5c78643.png",
+    "static/media/picanha-cheese-salada.a65830e3.png": "/mc-lojinha-feliz-com-redux/static/media/picanha-cheese-salada.a65830e3.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8a87f269.js",
+    "static/js/2.0e1c1de0.chunk.js",
+    "static/css/main.a9b3288d.chunk.css",
+    "static/js/main.1c62a01b.chunk.js"
+  ]
+}
